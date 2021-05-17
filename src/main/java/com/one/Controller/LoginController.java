@@ -1,4 +1,4 @@
-package com.one.Login;
+package com.one.Controller;
 
 import com.one.pojo.User;
 import org.springframework.stereotype.Controller;
@@ -14,11 +14,11 @@ import javax.servlet.http.HttpSession;
  * @描述: 实现登录功能
  */
 @Controller
-public class LoginConfig {
+public class LoginController {
 
     @GetMapping(value = {"/","/login"})
     public String login(){
-        return "table/login";
+        return "login";
     }
 
     /**
@@ -32,10 +32,10 @@ public class LoginConfig {
     public String welcome(User user, HttpSession session , Model model){
         if ("one".equals(user.getUsername()) && "123".equals(user.getPassword())) {
             session.setAttribute("loginUser", user);
-            return "redirect:/main";
+            return "redirect:/index_alt.html";
         }else {
             model.addAttribute("msg","账户或密码错误");
-            return "table/login";
+            return "login";
         }
     }
 
@@ -43,14 +43,16 @@ public class LoginConfig {
      * 解决页面重新提交表单的问题
      * @return 返回网站的主页面
      */
-    @GetMapping("/main")
+    @GetMapping("/index_alt.html")
     public String toMain(HttpSession session,Model model){
-        Object loginUser = session.getAttribute("loginUser");
-        if (loginUser != null)
-            return "table/index_alt";
-        else {
-            model.addAttribute("msg","请先登录");
-            return "redirect:/";
-        }
+//        Object loginUser = session.getAttribute("loginUser");
+//        if (loginUser != null)
+//            return "index_alt";
+//        else {
+//            model.addAttribute("msg","请先登录");
+//            return "redirect:/";
+//        }
+        return "index_alt";
     }
+
 }

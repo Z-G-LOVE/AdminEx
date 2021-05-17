@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <div th:include="/table/common::common_head_meta"></div>
+    <div th:include="common::common_head_meta"></div>
 
     <title>Basic Table</title>
 
-    <div th:replace="/table/common::common_head_link"></div>
+    <div th:replace="common::common_head_link"></div>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <div th:replace="/table/common::common_head_script"></div>
+    <div th:replace="common::common_head_script"></div>
 </head>
 
 <body class="sticky-header">
@@ -18,15 +18,15 @@
         <div class="left-side sticky-left-side">
 
             <!--网站logo 大 和 小-->
-            <div th:replace="/table/common::common_logo"></div>
+            <div th:replace="common::common_logo"></div>
             <!--网站logo 大 和 小-->
 
             <div class="left-side-inner">
 
                 <!-- 头部用户个人操作 -->
-                <div th:replace="/table/common::common_user_head"></div>
+                <div th:replace="common::common_user_head"></div>
 
-                <div th:replace="/table/common::commmon_ul"></div>
+                <div th:replace="common::commmon_ul"></div>
             </div>
         </div>
         <!-- 左侧结束-->
@@ -50,7 +50,7 @@
                 <!--搜索结束-->
 
                 <!--通知菜单开始 -->
-                <div th:replace="/table/common::common_menu_right"></div>
+                <div th:replace="common::common_menu_right"></div>
                 <!--通知菜单结束 -->
             </div>
             <!-- 头部分结束-->
@@ -394,14 +394,14 @@
             <!--内容区域结束-->
 
             <!--footer section start-->
-            <div th:replace="/table/common::common_footer"></div>
+            <div th:replace="common::common_footer"></div>
             <!--footer section end-->
         </div>
         <!-- main content end-->
     </section>
 
     <!-- 最后把js文件的页面加载速度-->
-    <div th:replace="/table/common::common_script"></div>
+    <div th:replace="common::common_script"></div>
     <!--结束-->
 
 </body>

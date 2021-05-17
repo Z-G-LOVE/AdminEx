@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:include="common::common_head_meta"></div>
+
+  <title>Dropzone</title>
+
+  <!--dropzone css-->
+  <link href="js/dropzone/css/dropzone.css" rel="stylesheet"/>
+
+  <!--common css-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+    <div th:replace="common::common_head_script"></div>
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--网站logo 大 和 小-->
+        <div th:replace="common::common_logo"></div>
+        <!--网站logo 大 和 小-->
+
+
+        <div class="left-side-inner">
+
+            <!-- 头部用户个人操作 -->
+            <div th:replace="common::common_user_head"></div>
+
+            <div th:replace="common::commmon_ul"></div>
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+        <!--toggle button start-->
+        <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+        <!--toggle button end-->
+
+        <!--search start-->
+        <form class="searchform" action="http://view.jqueryfuns.com/2014/4/10/7_df25ceea231ba5f44f0fc060c943cdae/index.html" method="post">
+            <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+        </form>
+        <!--search end-->
+
+            <!--通知菜单开始 -->
+            <div th:replace="common::common_menu_right"></div>
+            <!--通知菜单结束 -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- page heading start-->
+        <div class="page-heading">
+            <h3>
+                Dropzone File Upload
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Forms</a>
+                </li>
+                <li class="active">Dropzone File Upload</li>
+            </ul>
+        </div>
+        <!-- page heading end-->
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+
+            <section class="panel">
+                <header class="panel-heading">
+                    Dropzone File Upload
+                    <span class="tools pull-right">
+                        <a class="fa fa-chevron-down" href="javascript:;"></a>
+                        <a class="fa fa-times" href="javascript:;"></a>
+                     </span>
+                </header>
+                <div class="panel-body">
+                    <form action="http://view.jqueryfuns.com/2014/4/10/7_df25ceea231ba5f44f0fc060c943cdae/js/dropzone/upload.php" class="dropzone" id="my-awesome-dropzone"></form>
+                </div>
+            </section>
+
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <div th:replace="common::common_footer"></div>
+        <!--footer section end-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- 最后把js文件的页面加载速度-->
+<div th:replace="common::common_script"></div>
+<!--结束-->
+
+<!--dropzone-->
+<script src="js/dropzone/dropzone.js"></script>
+
+
+</body>
+</html>

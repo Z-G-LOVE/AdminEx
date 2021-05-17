@@ -33,11 +33,11 @@
 <!--网站logo 大 和 小-->
 <div th:fragment="common_logo">
 <div class="logo">
-    <a href="index.html" th:href="@{/templates/table/index.html}"><img src="images/logo.png" th:src="@{/images/logo.png}" alt=""></a>
+    <a href="index.html" th:href="@{/templates/index.html}"><img src="images/logo.png" th:src="@{/images/logo.png}" alt=""></a>
 </div>
 <!-- 隐藏侧边栏时显示logo -->
 <div class="logo-icon text-center">
-    <a href="index.html" th:href="@{/templates/table/index.html}"><img src="images/logo_icon.png" th:src="@{/images/logo.png}" alt=""></a>
+    <a href="index.html" th:href="@{/templates/index.html}"><img src="images/logo_icon.png" th:src="@{/images/logo.png}" alt=""></a>
 </div>
 </div>
 <!--网站logo 大和小结束-->
@@ -63,10 +63,10 @@
 
 <!--侧边栏导航开始-->
 <ul class="nav nav-pills nav-stacked custom-nav" th:fragment="commmon_ul">
-    <li class="menu-list nav-active"><a href="index.html" th:href="@{/templates/table/index.html}"><i class="fa fa-home"></i> <span>指示板</span></a>
+    <li class="menu-list nav-active"><a href="index.html" th:href="@{/templates/index.html}"><i class="fa fa-home"></i> <span>指示板</span></a>
         <ul class="sub-menu-list">
-            <li class="active"><a href="index_alt.html" th:href="@{/templates/table/index.html}"> 指示板 1</a></li>
-            <li><a href="index.html" th:href="@{/templates/table/index.html}"> 指示板 2</a></li>
+            <li class="active"><a href="index_alt.html" th:href="@{/templates/index_alt.html}"> 指示板 1</a></li>
+            <li><a href="index.html" th:href="@{/templates/index.html}"> 指示板 2</a></li>
         </ul>
     </li>
     <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>布局</span></a>
@@ -132,7 +132,7 @@
     </li>
     <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>数据表</span></a>
         <ul class="sub-menu-list">
-            <li><a href="basic_table.html" th:href="@{/templates/table/basic_table.html}">基本表</a></li>
+            <li><a href="table/basic_table.html" th:href="@{/basic_table.html}">基本表</a></li>
             <li><a href="dynamic_table.html" th:href="@{/dynamic_table.html}">先进的表</a></li>
             <li><a href="responsive_table.html" th:href="@{/responsive_table.html}"> 响应表</a></li>
             <li><a href="editable_table.html" th:href="@{/editable_table.html}">可编辑表 </a></li>
@@ -161,7 +161,7 @@
             <li><a href="lock_screen.html" th:href="@{/lock_screen.html}"> 屏幕锁 </a></li>
         </ul>
     </li>
-    <li><a href="login.html" th:href="@{/templates/table/login.html}"><i class="fa fa-sign-in"></i> <span>登陆页面</span></a></li>
+    <li><a href="login.html" th:href="@{/templates/login.html}"><i class="fa fa-sign-in"></i> <span>登陆页面</span></a></li>
 
 </ul>
 <!--侧边栏导航结束-->
